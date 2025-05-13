@@ -14,7 +14,7 @@ const Logo = () => {
                 />
                 <text
                     x="50"
-                    y="60"
+                    y="65"
                     textAnchor="middle"
                     fill="#0DAD8D"
                     fontSize="40"

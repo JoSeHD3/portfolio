@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Navbar } from './components';
+import { Band, Navbar } from './components';
 
 declare module '@mui/material/styles' {
     interface Palette {
@@ -29,6 +29,9 @@ function App() {
                 <section>
                     <span className="bold text-2xl">Testowy tekst</span>
                 </section>
+                <main>
+                    <Band label={'Experience'} flip={true} />
+                </main>
             </ThemeProvider>
         </>
     );
