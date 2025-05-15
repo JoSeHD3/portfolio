@@ -30,7 +30,7 @@ function App() {
                     <span className="bold text-2xl">Testowy tekst</span>
                 </section>
                 <main>
-                    <Band label={'Experience'} flip={true} />
+                    <Band label={'Experience'} flip={false} />
                 </main>
             </ThemeProvider>
         </>
