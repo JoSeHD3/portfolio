@@ -1,25 +1,6 @@
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Band, Navbar } from './components';
-
-declare module '@mui/material/styles' {
-    interface Palette {
-        basic: Palette['primary'];
-    }
-
-    interface PaletteOptions {
-        basic?: PaletteOptions['primary'];
-    }
-}
-
-const { palette } = createTheme();
-const { augmentColor } = palette;
-const createColor = (mainColor: string) =>
-    augmentColor({ color: { main: mainColor } });
-const theme = createTheme({
-    palette: {
-        basic: createColor('#0DAD8D'),
-    },
-});
+import { ThemeProvider } from '@mui/material/styles';
+import { Band, Navbar, theme } from './components';
+import Button from '@mui/material/Button';
 
 function App() {
     return (
@@ -77,6 +58,9 @@ function App() {
                     malesuada. Maecenas et felis egestas, viverra orci at,
                     vestibulum purus. Aenean iaculis vel arcu in accumsan.
                     <Band label={'Experience'} flip={true} />
+                    <Button variant="border" className="w-36">
+                        Test
+                    </Button>
                 </main>
             </ThemeProvider>
         </>
