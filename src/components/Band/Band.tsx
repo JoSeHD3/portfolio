@@ -2,11 +2,16 @@ import { cn } from '@lib';
 
 const Band = ({ label, flip }: { label: string; flip?: boolean }) => {
     return (
-        <div className="relative w-full">
+        <div
+            className={cn(
+                'w-full flex',
+                flip ? 'justify-end' : 'justify-start'
+            )}
+        >
             <div
                 className={cn(
-                    'absolute bg-[#303030] text-[#0DAD8D] font-semibold px-10 py-4 pl-10 w-2/3  text-2xl',
-                    flip ? 'text-right right-0' : 'text-left'
+                    'relative bg-[#303030] text-[#0DAD8D] font-semibold px-10 py-4 pl-10 w-2/3 text-2xl flex items-center',
+                    flip ? 'justify-end' : 'justify-start'
                 )}
             >
                 <span
