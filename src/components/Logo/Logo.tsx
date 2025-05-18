@@ -14,10 +14,10 @@ const Logo = () => {
                 />
                 <text
                     x="50"
-                    y="65"
+                    y="78"
                     textAnchor="middle"
                     fill="#0DAD8D"
-                    fontSize="40"
+                    fontSize="80"
                     fontWeight="bold"
                     fontFamily="Roboto"
                 >

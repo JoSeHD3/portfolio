@@ -9,10 +9,10 @@ declare module '@mui/material/Button' {
 
 declare module '@mui/material/styles' {
     interface Palette {
-        basic: Palette['primary'];
+        basic: Palette['basic'];
     }
 
     interface PaletteOptions {
-        basic?: PaletteOptions['primary'];
+        basic?: PaletteOptions['basic'];
     }
 }

@@ -10,7 +10,7 @@ const Band = ({ label, flip }: { label: string; flip?: boolean }) => {
         >
             <div
                 className={cn(
-                    'relative bg-[#303030] text-[#0DAD8D] font-semibold px-10 py-4 pl-10 w-2/3 text-2xl flex items-center',
+                    'relative bg-[#303030] text-[#0DAD8D] font-semibold px-10 py-6 pl-10 w-2/3 text-2xl flex items-center',
                     flip ? 'justify-end' : 'justify-start'
                 )}
             >
