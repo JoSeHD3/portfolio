@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@mui/material/styles';
 import { Band, Navbar, theme, Header, Experience } from './components';
-import Button from '@mui/material/Button';
+import { Projects } from './components';
 
 function App() {
     return (
@@ -10,10 +10,9 @@ function App() {
             <main>
                 <Band label={'Experience'} flip={false} />
                 <Experience />
-                <Band label={'Experience'} flip={true} />
-                <Button variant="border" className="w-36">
-                    Test
-                </Button>
+                <Band label={'Projects'} flip={true} />
+                <Projects />
+                <Band label={'Contact'} flip={false} />
             </main>
         </ThemeProvider>
     );

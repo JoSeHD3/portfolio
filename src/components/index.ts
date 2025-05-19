@@ -4,3 +4,4 @@ export { Band } from './Band';
 export { theme } from './theme';
 export { Header } from './Header';
 export { Experience } from './Experience';
+export { Projects } from './Projects';
