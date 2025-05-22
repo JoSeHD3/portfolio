@@ -5,7 +5,7 @@ import { Link } from '@mui/material';
 
 const Contact = () => {
     return (
-        <section className="w-full container mt-20 mb-20 mx-auto flex flex-row align-middle justify-center">
+        <section className="w-full container mt-20 mb-10 mx-auto flex flex-row align-middle justify-center">
             <Link
                 href="https://www.linkedin.com/in/sebastianbozek3"
                 className="flex justify-center w-1/3"
