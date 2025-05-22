@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@mui/material/styles';
-import { Band, Navbar, theme, Header, Experience } from './components';
+import { Band, Navbar, theme, Header, Experience, Contact } from './components';
 import { Projects } from './components';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
                 <Band label={'Projects'} flip={true} />
                 <Projects />
                 <Band label={'Contact'} flip={false} />
+                <Contact />
             </main>
         </ThemeProvider>
     );
