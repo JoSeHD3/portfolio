@@ -23,7 +23,8 @@
         "noUncheckedSideEffectImports": true,
         "baseUrl": "src",
         "paths": {
-            "@lib": ["lib.ts"]
+            "@lib": ["lib.ts"],
+            "@components": ["components/"]
         }
     },
     "include": ["src"]

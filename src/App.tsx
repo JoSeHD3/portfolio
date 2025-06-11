@@ -1,11 +1,18 @@
 import { ThemeProvider } from '@mui/material/styles';
-import { Band, Navbar, theme, Header, Experience, Contact } from './components';
+import {
+    Band,
+    NavbarBar,
+    theme,
+    Header,
+    Experience,
+    Contact,
+} from './components';
 import { Projects } from './components';
 
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <Navbar />
+            <NavbarBar />
             <Header />
             <main>
                 <Band label={'Experience'} flip={false} />

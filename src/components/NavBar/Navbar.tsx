@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavbarDesktop, NavbarMobile } from '.';
 
-const Sidebar = () => {
+const Navbar = () => {
     const [mobile, setMobile] = useState<boolean>();
 
     useEffect(() => {
@@ -25,4 +25,4 @@ const Sidebar = () => {
     ) : null;
 };
 
-export { Sidebar };
+export { Navbar };
