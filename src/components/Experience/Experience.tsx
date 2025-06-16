@@ -12,7 +12,10 @@ const Experience = () => {
     };
 
     return (
-        <main className="flex flex-row items-center justify-center w-full mt-20 mb-20">
+        <main
+            className="flex flex-row items-center justify-center w-full mt-20 mb-20"
+            id="experience"
+        >
             <span className="flex-1 px-8">{description}</span>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mx-4 flex-1">
                 {experienceItems.map((item, index) => (

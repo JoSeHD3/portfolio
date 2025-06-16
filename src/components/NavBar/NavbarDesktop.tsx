@@ -1,13 +1,20 @@
 import Button from '@mui/material/Button';
 import { navbarItems } from '.';
+import { Link } from '@mui/material';
 
 const NavbarDesktop = () => {
     return (
         <div className="flex flex-nowrap h-full right-0">
             {navbarItems.map((item, index) => (
-                <Button key={index} color="basic" className="h-full xl:w-48">
+                <Button
+                    LinkComponent={Link}
+                    href={item.location}
+                    key={index}
+                    color="basic"
+                    className="h-full xl:w-48"
+                >
                     <span className="text-lg text-clip overflow-hidden">
-                        {item}
+                        {item.name}
                     </span>
                 </Button>
             ))}

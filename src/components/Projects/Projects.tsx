@@ -37,7 +37,10 @@ const Projects = () => {
     };
 
     return (
-        <section className="flex flex-col items-center justify-center mt-20 mb-20 relative px-4">
+        <section
+            className="flex flex-col items-center justify-center mt-20 mb-20 relative px-4"
+            id="projects"
+        >
             <div className="text-[#0DAD8D] mb-2 text-3xl font-semibold">
                 {item.title}
             </div>

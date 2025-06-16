@@ -1,5 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { Button, IconButton, List, ListItem } from '@mui/material';
+import { Button, IconButton, Link, List, ListItem } from '@mui/material';
 import { useState } from 'react';
 import { navbarItems } from '.';
 import { MobileDrawer } from '@components/ui';
@@ -30,13 +30,15 @@ const NavbarMobile = () => {
                     {navbarItems.map((item, index) => (
                         <ListItem key={index} disablePadding>
                             <Button
+                                LinkComponent={Link}
+                                href={item.location}
                                 key={index}
                                 color="basic"
                                 className="h-full w-full"
                                 style={{ justifyContent: 'flex-start' }}
                             >
                                 <span className="text-lg text-clip overflow-hidden my-2">
-                                    {item}
+                                    {item.name}
                                 </span>
                             </Button>
                         </ListItem>

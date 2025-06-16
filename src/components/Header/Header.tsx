@@ -1,6 +1,9 @@
 const Header = () => {
     return (
-        <header className="flex flex-col container mx-auto mt-20 mb-80 px-4">
+        <header
+            className="flex flex-col container mx-auto mt-20 mb-80 px-4"
+            id="header"
+        >
             <span className="semibold text-[#0DAD8D] mb-4">Hi, my name is</span>
             <h1 className="bold text-[#CFCFCF] text-6xl mb-4">
                 Sebastian Bożek.
