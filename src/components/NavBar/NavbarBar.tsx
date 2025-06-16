@@ -1,18 +1,15 @@
 import { Logo } from '..';
 import { Navbar } from '.';
+import { FlagButton } from '@components/ui';
 
 const NavbarBar = () => {
     return (
-        <nav className="flex items-center justify-between pl-4 h-16 gap-4">
+        <nav className="sticky top-0 overflow-hidden z-20 bg-[#262626] flex items-center justify-between pl-4 h-16 gap-4">
             <div className="flex items-center">
                 <Logo />
             </div>
             <div className="flex items-center">
-                <img
-                    src="https://flagcdn.com/w40/gb.png"
-                    alt="UK Flag"
-                    className="h-6"
-                />
+                <FlagButton />
             </div>
             <Navbar />
         </nav>
