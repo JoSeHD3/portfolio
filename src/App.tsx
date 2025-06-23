@@ -6,6 +6,7 @@ import {
     Header,
     Experience,
     Contact,
+    Technology,
 } from './components';
 import { Projects } from './components';
 
@@ -19,7 +20,9 @@ function App() {
                 <Experience />
                 <Band label={'Projects'} flip={true} />
                 <Projects />
-                <Band label={'Contact'} flip={false} />
+                <Band label={'Technologies'} flip={false} />
+                <Technology />
+                <Band label={'Contact'} flip={true} />
                 <Contact />
             </main>
         </ThemeProvider>

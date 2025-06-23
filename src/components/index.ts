@@ -6,3 +6,4 @@ export { Header } from './Header';
 export { Experience } from './Experience';
 export { Projects } from './Projects';
 export { Contact } from './Contact';
+export { Technology } from './Technology';
