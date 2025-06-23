@@ -6,7 +6,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const updateMobile = () => {
-            setMobile(window.innerWidth < 576 ? true : false);
+            setMobile(window.innerWidth < 768 ? true : false);
         };
 
         updateMobile();
