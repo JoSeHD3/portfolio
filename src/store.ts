@@ -11,4 +11,6 @@ const useFlag = create<FlagState>()((set) => ({
         set((state) => ({ flagName: state.flagName === 'gb' ? 'pl' : 'gb' })),
 }));
 
+export const flagStore = useFlag;
+
 export { useFlag };

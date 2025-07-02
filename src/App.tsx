@@ -9,6 +9,8 @@ import {
     Technology,
 } from './components';
 import { Projects } from './components';
+import './i18n';
+import './i18nSync';
 
 function App() {
     return (

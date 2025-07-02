@@ -18,9 +18,11 @@
     "@tailwindcss/vite": "^4.1.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.12.1",
+    "i18next": "^25.3.0",
     "path": "^0.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.5.3",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.4",
     "zustand": "^5.0.6"
