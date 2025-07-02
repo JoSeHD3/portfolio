@@ -24,6 +24,7 @@
         "baseUrl": "src",
         "paths": {
             "@lib": ["lib.ts"],
+            "@store": ["store. ts"],
             "@components": ["components/"]
         }
     },

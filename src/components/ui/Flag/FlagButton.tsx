@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useFlag } from '@store';
 import { Flag } from './Flag';
 
 const FlagButton = () => {
-    const [flagName, setFlagName] = useState<string>('gb');
+    const flagName = useFlag((state) => state.flagName);
+    const switchFlagName = useFlag((state) => state.switchFlagName);
 
     return (
-        <button onClick={() => setFlagName(flagName === 'gb' ? 'pl' : 'gb')}>
+        <button onClick={switchFlagName}>
             <Flag flag={flagName} />
         </button>
     );

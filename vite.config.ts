@@ -9,6 +9,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@lib': path.resolve(__dirname, 'src/lib.ts'),
+            '@store': path.resolve(__dirname, 'src/store.ts'),
             '@components': path.resolve(__dirname, 'src/components'),
         },
     },
