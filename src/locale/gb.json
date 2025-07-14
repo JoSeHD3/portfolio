@@ -3,6 +3,8 @@
         "greeting": "Hi, my name is",
         "name": "Sebastian Bożek.",
         "brief_desc": "I am designing and creating apps.",
-        "full_desc": "I am a software engineering graduate and I am passionate about creating applications that can be useful for everyone! Currently I am looking for new opportunities and challenges, still developing my skills, focusing on React and Next.js."
+        "full_desc": "I am a software engineering graduate and I am passionate about creating applications that can be useful for everyone! Currently I am looking for new opportunities and challenges, still developing my skills, focusing on React and Next.js.",
+        "christmas-description": "That's a descirption for christmas project",
+        "mobilewarehouse-description": "That's a descirption for mobile warehouse project"
     }
 }

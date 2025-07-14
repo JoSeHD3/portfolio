@@ -1,32 +1,24 @@
 import { ThemeProvider } from '@mui/material/styles';
-import {
-    Band,
-    NavbarBar,
-    theme,
-    Header,
-    Experience,
-    Contact,
-    Technology,
-} from './components';
-import { Projects } from './components';
+import { NavbarBar, theme } from './components';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './i18n';
 import './i18nSync';
+import { HomePage, ProjectPage } from './pages';
 
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <NavbarBar />
-            <Header />
-            <main>
-                <Band label={'Experience'} flip={false} />
-                <Experience />
-                <Band label={'Projects'} flip={true} />
-                <Projects />
-                <Band label={'Technologies'} flip={false} />
-                <Technology />
-                <Band label={'Contact'} flip={true} />
-                <Contact />
-            </main>
+            <Router>
+                <NavbarBar />
+
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route
+                        path="/projects/:projectName"
+                        element={<ProjectPage />}
+                    />
+                </Routes>
+            </Router>
         </ThemeProvider>
     );
 }
