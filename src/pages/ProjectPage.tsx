@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { getProjectData } from '@lib';
 import { useParams } from 'react-router-dom';
 
 interface ProjectParams {
@@ -8,18 +8,39 @@ interface ProjectParams {
 
 const ProjectPage = () => {
     const { projectName } = useParams<ProjectParams>();
-    const { t } = useTranslation();
 
-    const listOfProjects: string[] = ['christmas', 'mobilewarehouse'];
+    const modules = getProjectData(projectName!);
 
     return (
-        <>
-            {listOfProjects.includes(projectName!) && (
-                <span className="text-6xl">
-                    {t(`${projectName}-description`)}
-                </span>
-            )}
-        </>
+        <div>
+            {modules.map((item, index) => (
+                <div key={index} className="flex flex-row items-center p-4">
+                    {index % 2 === 0 ? (
+                        <>
+                            <img
+                                src={item.module.imgPath}
+                                alt="projectimg"
+                                className="w-32 h-32 object-cover mb-8"
+                            />
+                            <span className="text-center ">
+                                {item.module.description}
+                            </span>
+                        </>
+                    ) : (
+                        <>
+                            <span className="text-center ">
+                                {item.module.description}
+                            </span>
+                            <img
+                                src={item.module.imgPath}
+                                alt="projectimg"
+                                className="w-32 h-32 object-cover mb-2"
+                            />
+                        </>
+                    )}
+                </div>
+            ))}
+        </div>
     );
 };
 
