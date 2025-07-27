@@ -1,8 +1,11 @@
 import Button from '@mui/material/Button';
 import { navbarItems } from '.';
 import { Link } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const NavbarDesktop = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="flex flex-nowrap h-full right-0">
             {navbarItems.map(
@@ -19,7 +22,7 @@ const NavbarDesktop = () => {
                                 {item.num}
                             </span>
                             <span className="text-lg text-clip ">
-                                {item.name}
+                                {t(item.name)}
                             </span>
                         </Button>
                     )

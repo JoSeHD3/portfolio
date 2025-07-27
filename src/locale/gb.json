@@ -5,6 +5,26 @@
         "brief_desc": "I am designing and creating apps.",
         "full_desc": "I am a software engineering graduate and I am passionate about creating applications that can be useful for everyone! Currently I am looking for new opportunities and challenges, still developing my skills, focusing on React and Next.js.",
         "christmas-description": "That's a descirption for christmas project",
-        "mobilewarehouse-description": "That's a descirption for mobile warehouse project"
+        "mobilewarehouse-description": "That's a descirption for mobile warehouse project",
+        "britenetTitle": "Intern React Developer",
+        "britenetDescription": "- Developed a responsive web application using React Next.js, Firebase, Tailwind CSS, TypeScript and Shadcn/UI\n- Leveraged server-side rendering with Next.js to optimize data integration from Firebase, significantly improving load times and decreasing number of queries\n- Architected complex routing solutions using the Next.js App Router and Middleware, enabling dynamic, route-specific content delivery\n- Utilized advanced React techniques, such as hook management, render props, suspense and lazy loading",
+        "epamTitle": "Trainee .NET Developer",
+        "epamDescription": "- Contributed to projects by developing additional features using advanced .NET technologies such as Entity Framework, LINQ, SOLID architecture and OOP\n- Use of Dependency Injection and custom Middleware to enhance architecture\n- Implemented three-layer architecture, focusing on separation of concerns and optimizing data access and business logic layers",
+        "fivemTitle": "Freelance Software Developer",
+        "fivemDescription": "- Designing and creating scripts for FiveM platform using LUA, JS and QBCore Framework\n- Implementation of middleware and event-driven architecture for asynchronous operations handling\n- Managing robust client-server networking and database interactions using relational database",
+        "saraTitle": "Unity 3D Developer",
+        "saraDescription": "- Development and implementation of a 3D open-world RPG game using the Unity engine\n- Programming AI and physics systems using Rigidbody, as well as creating custom scriptable objects for modular game features\n- Performance optimization using advanced optimization techniques such as Level of Details (LOD) and occlusion culling\n- Participation in several months of workshops focused on C# and Unity programming",
+        "navbarAbout": "About",
+        "navbarExperience": "Experience",
+        "navbarProjects": "Projects",
+        "navbarTechnologies": "Technologies",
+        "navbarContact": "Contact",
+        "bandExperience": "Experience",
+        "bandProjects": "Projects",
+        "bandTechnologies": "Technologies",
+        "bandContact": "Contact",
+        "projectsButton": "Find out more!",
+        "project1Title": "V-Journal",
+        "project1Description": "As part of a five-person team supervised by senior developers, we built an application similar in functionality to Jira. It enables project tracking, task management, and assignment to team members. Powered by AI and featuring a dynamic, interactive user interface, the app makes managing your projects easy and enjoyable."
     }
 }

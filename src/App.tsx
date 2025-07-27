@@ -9,6 +9,7 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <Router>
+                <div className="fixed inset-0 -z-10 bg-gradient-to-r from-[#262626] via-transparent to-[#262626]" />
                 <NavbarBar />
 
                 <Routes>

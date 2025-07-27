@@ -1,6 +1,9 @@
 import { cn } from '@lib';
+import { useTranslation } from 'react-i18next';
 
 const Band = ({ label, flip }: { label: string; flip?: boolean }) => {
+    const { t } = useTranslation();
+
     return (
         <div
             className={cn(
@@ -22,7 +25,7 @@ const Band = ({ label, flip }: { label: string; flip?: boolean }) => {
                 >
                     {flip ? '<' : '>'}
                 </span>
-                {label}
+                {t(label)}
                 <div
                     className={cn(
                         flip

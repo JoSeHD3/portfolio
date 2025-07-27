@@ -6,26 +6,26 @@ interface NavbarItem {
 
 export const navbarItems: NavbarItem[] = [
     {
-        name: 'About',
+        name: 'navbarAbout',
         location: '#header',
     },
     {
-        name: 'Experience',
+        name: 'navbarExperience',
         location: '#experience',
         num: '01.',
     },
     {
-        name: 'Projects',
+        name: 'navbarProjects',
         location: '#projects',
         num: '02.',
     },
     {
-        name: 'Technologies',
+        name: 'navbarTechnologies',
         location: '#technology',
         num: '03.',
     },
     {
-        name: 'Contact',
+        name: 'navbarContact',
         location: '#contact',
         num: '04.',
     },

@@ -12,13 +12,13 @@ const HomePage = () => {
         <>
             <Header />
             <main>
-                <Band label={'Experience'} flip={false} />
+                <Band label={'bandExperience'} flip={false} />
                 <Experience />
-                <Band label={'Projects'} flip={true} />
+                <Band label={'bandProjects'} flip={true} />
                 <Projects />
-                <Band label={'Technologies'} flip={false} />
+                <Band label={'bandTechnologies'} flip={false} />
                 <Technology />
-                <Band label={'Contact'} flip={true} />
+                <Band label={'bandContact'} flip={true} />
                 <Contact />
             </main>
         </>

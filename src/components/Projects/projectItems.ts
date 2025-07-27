@@ -8,9 +8,9 @@ interface ProjectItem {
 const projectItems: ProjectItem[] = [
     {
         id: 1,
-        image: '/seal.jpg',
-        title: 'Seal',
-        description: 'Quick Seal Description',
+        image: '/vjournal1.png',
+        title: 'project1Title',
+        description: 'project1Description',
     },
     {
         id: 2,

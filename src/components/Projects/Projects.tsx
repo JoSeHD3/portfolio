@@ -4,9 +4,11 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { AnimatePresence, motion } from 'framer-motion';
 import Button from '@mui/material/Button';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
     const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
+    const { t } = useTranslation();
     const item = projectItems[index];
 
     const next = () =>
@@ -38,16 +40,16 @@ const Projects = () => {
 
     return (
         <section
-            className="flex flex-col items-center justify-center mt-20 mb-20 relative px-4"
+            className="flex flex-col items-center justify-center mt-20 mb-20 gap-4  px-4"
             id="projects"
         >
             <div className="text-[#0DAD8D] mb-2 text-3xl font-semibold">
-                {item.title}
+                {t(item.title)}
             </div>
-            <div className="relative w-80 md:w-full max-w-md h-[400px] flex items-center justify-center">
+            <div className="md:w-full gap-4 max-w-md flex items-center justify-center">
                 <button
                     onClick={prev}
-                    className="absolute left-[-40px] hover:text-[#0DAD8D] transition"
+                    className="hover:text-[#0DAD8D] transition"
                 >
                     <ArrowBackIosNewIcon fontSize="large" />
                 </button>
@@ -60,26 +62,30 @@ const Projects = () => {
                         animate="center"
                         exit="exit"
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
-                        className="w-full absolute"
+                        className="w-full"
                     >
-                        <div className="relative w-full h-80 overflow-hidden">
+                        <div className="w-full overflow-hidden">
                             <img
                                 src={item.image}
-                                alt={item.title}
-                                className="w-full h-80 object-cover border border-neutral-700"
+                                alt={t(item.title)}
+                                className="w-full object-cover border border-neutral-700"
                             />
                         </div>
-                        <div className="mt-4 text-sm">{item.description}</div>
+                        <div className="mt-4 text-sm">
+                            {t(item.description)}
+                        </div>
                     </motion.div>
                 </AnimatePresence>
                 <button
                     onClick={next}
-                    className="absolute right-[-40px] hover:text-[#0DAD8D] transition"
+                    className="hover:text-[#0DAD8D] transition"
                 >
                     <ArrowForwardIosIcon fontSize="large" />
                 </button>
             </div>
-            <Button variant="border">Find out more!</Button>
+            <Button variant="border" className="mt-8">
+                {t('projectsButton')}
+            </Button>
         </section>
     );
 };

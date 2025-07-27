@@ -3,9 +3,11 @@ import { Button, IconButton, Link, List, ListItem } from '@mui/material';
 import { useState } from 'react';
 import { navbarItems } from '.';
 import { MobileDrawer } from '@components/ui';
+import { useTranslation } from 'react-i18next';
 
 const NavbarMobile = () => {
     const [isOpenned, setIsOpenned] = useState<boolean>(false);
+    const { t } = useTranslation();
 
     const handleDrawerOpenning = (): void => {
         setIsOpenned((isOpenned) => !isOpenned);
@@ -38,7 +40,7 @@ const NavbarMobile = () => {
                                 style={{ justifyContent: 'flex-start' }}
                             >
                                 <span className="text-lg text-clip overflow-hidden my-2">
-                                    {item.name}
+                                    {t(item.name)}
                                 </span>
                             </Button>
                         </ListItem>
