@@ -1,16 +1,16 @@
 import { create } from 'zustand';
 
+export type FlagName = 'gb' | 'pl';
+
 interface FlagState {
-    flagName: 'gb' | 'pl';
+    flagName: FlagName;
     switchFlagName: () => void;
 }
 
-const useFlag = create<FlagState>()((set) => ({
+export const useFlag = create<FlagState>((set, get) => ({
     flagName: 'gb',
     switchFlagName: () =>
-        set((state) => ({ flagName: state.flagName === 'gb' ? 'pl' : 'gb' })),
+        set({ flagName: get().flagName === 'gb' ? 'pl' : 'gb' }),
 }));
 
 export const flagStore = useFlag;
-
-export { useFlag };

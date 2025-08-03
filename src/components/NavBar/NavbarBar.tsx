@@ -1,6 +1,6 @@
 import { Logo } from '..';
 import { Navbar } from '.';
-import { FlagButton } from '@components/ui';
+import { FlagButton } from '../../components/ui';
 
 const NavbarBar = () => {
     return (

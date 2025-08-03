@@ -1,4 +1,4 @@
-import { useFlag } from '@store';
+import { useFlag } from '../../../store';
 import { Flag } from './Flag';
 
 const FlagButton = () => {

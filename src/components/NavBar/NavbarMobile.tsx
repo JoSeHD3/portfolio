@@ -2,7 +2,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Button, IconButton, Link, List, ListItem } from '@mui/material';
 import { useState } from 'react';
 import { navbarItems } from '.';
-import { MobileDrawer } from '@components/ui';
+import { MobileDrawer } from '../../components/ui';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
