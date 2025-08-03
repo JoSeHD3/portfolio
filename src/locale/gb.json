@@ -44,6 +44,7 @@
         "bdo1": "This calculator helps you track your progress while grinding in Black Desert Online. It lets you easily analyze your profits and losses during long sessions, so you can forget about messy Excel spreadsheets. It does all the work for you and shows you the data you actually need.",
         "bdo2": "The app was created entirely as a desktop application using the .NET Framework. It was my first project that introduced me to the world of programming.",
         "christmascalendar1": "This is an advent calendar that helps you pick the perfect song or movie for each day until the end of December! Added animations and a polished interface boost the excitement and fun of opening each window.",
-        "christmascalendar2": "It was built using Next.js with MongoDB and shadcn/ui, following a mobile-first approach. This modern setup allows for quick data retrieval by storing information locally, while the selections are randomly drawn from a server-side pool. The interactive design features animations and is deployed using Vercel."
+        "christmascalendar2": "It was built using Next.js with MongoDB and shadcn/ui, following a mobile-first approach. This modern setup allows for quick data retrieval by storing information locally, while the selections are randomly drawn from a server-side pool. The interactive design features animations and is deployed using Vercel.",
+        "snackbar": "You're already here! Take a moment to explore and discover everything yourself."
     }
 }

@@ -6,9 +6,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import Snackbar from '@mui/material/Snackbar';
 
 const Projects = () => {
     const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
+    const [isSnackbarOpened, setIsSnackbarOpened] = useState<boolean>(false);
     const { t } = useTranslation();
     const navigate = useNavigate();
     const item = projectItems[index];
@@ -38,6 +40,18 @@ const Projects = () => {
             x: direction > 0 ? -50 : 50,
             opacity: 0,
         }),
+    };
+
+    const handleClick = () => {
+        if (item.id === 3) {
+            setIsSnackbarOpened(true);
+        } else {
+            navigate(item.path || '');
+        }
+    };
+
+    const handleClose = () => {
+        setIsSnackbarOpened(false);
     };
 
     return (
@@ -85,19 +99,16 @@ const Projects = () => {
                     <ArrowForwardIosIcon fontSize="large" />
                 </button>
             </div>
-            <Button
-                variant="border"
-                className="mt-8"
-                onClick={() => {
-                    if (item.id === 3) {
-                        console.log('Portfolio project clicked!');
-                    } else {
-                        navigate(item.path || '');
-                    }
-                }}
-            >
+            <Button variant="border" className="mt-8" onClick={handleClick}>
                 {t('projectsButton')}
             </Button>
+            <Snackbar
+                open={isSnackbarOpened}
+                autoHideDuration={3000}
+                onClose={handleClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                message={t('snackbar')}
+            />
         </section>
     );
 };

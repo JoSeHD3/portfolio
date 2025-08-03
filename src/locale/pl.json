@@ -44,6 +44,7 @@
         "bdo1": "Ten kalkulator pomaga śledzić postępy podczas grania w Black Desert Online. Umożliwia łatwą analizę zysków i strat podczas długich sesji, dzięki czemu możesz zapomnieć o chaotycznych arkuszach Excela. Wszystko robi za Ciebie i pokazuje potrzebne dane.",
         "bdo2": "Aplikacja została stworzona w całości jako aplikacja desktopowa przy użyciu .NET Framework. Był to mój pierwszy projekt, który wprowadził mnie do świata programowania.",
         "christmascalendar1": "To kalendarz adwentowy, który pomaga wybrać idealną piosenkę lub film na każdy dzień aż do końca grudnia! Dodane animacje i dopracowany interfejs zwiększają radość i ekscytację przy otwieraniu kolejnych okienek.",
-        "christmascalendar2": "Został zbudowany w Next.js z MongoDB i shadcn/ui, wykorzystując podejście mobile-first. Nowoczesne rozwiązanie pozwala na szybkie pobieranie danych, przechowując je lokalnie, podczas gdy wybory są losowane z puli dostępnej na serwerze. Interaktywny design z animacjami został wdrożony za pomocą Vercela."
+        "christmascalendar2": "Został zbudowany w Next.js z MongoDB i shadcn/ui, wykorzystując podejście mobile-first. Nowoczesne rozwiązanie pozwala na szybkie pobieranie danych, przechowując je lokalnie, podczas gdy wybory są losowane z puli dostępnej na serwerze. Interaktywny design z animacjami został wdrożony za pomocą Vercela.",
+        "snackbar": "Jesteś już na miejscu! Poświęć chwilę, aby samodzielnie wszystko odkryć i poznać."
     }
 }
