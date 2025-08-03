@@ -3,6 +3,7 @@ interface ProjectItem {
     image: string;
     title: string;
     description: string;
+    path?: string;
 }
 
 const projectItems: ProjectItem[] = [
@@ -11,18 +12,34 @@ const projectItems: ProjectItem[] = [
         image: '/vjournal1.png',
         title: 'project1Title',
         description: 'project1Description',
+        path: '/projects/vjournal',
     },
     {
         id: 2,
-        image: '/seal.jpg',
-        title: 'Seal2',
-        description: 'Quick Seal Description2',
+        image: '/mobilestorage1.png',
+        title: 'project2Title',
+        description: 'project2Description',
+        path: '/projects/mobilestorage',
     },
     {
         id: 3,
         image: '/seal.jpg',
-        title: 'Seal3',
-        description: 'Quick Seal Description3',
+        title: 'project3Title',
+        description: 'project3Description',
+    },
+    {
+        id: 4,
+        image: '/bdo1.png',
+        title: 'project4Title',
+        description: 'project4Description',
+        path: '/projects/bdo',
+    },
+    {
+        id: 5,
+        image: '/christmascalendar1.png',
+        title: 'project5Title',
+        description: 'project5Description',
+        path: '/projects/christmascalendar',
     },
 ];
 

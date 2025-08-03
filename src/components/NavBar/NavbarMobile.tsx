@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { navbarItems } from '.';
 import { MobileDrawer } from '@components/ui';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const NavbarMobile = () => {
     const [isOpenned, setIsOpenned] = useState<boolean>(false);
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     const handleDrawerOpenning = (): void => {
         setIsOpenned((isOpenned) => !isOpenned);
@@ -33,7 +35,11 @@ const NavbarMobile = () => {
                         <ListItem key={index} disablePadding>
                             <Button
                                 LinkComponent={Link}
-                                href={item.location}
+                                onClick={() =>
+                                    navigate('/', {
+                                        state: { scrollTo: item.location },
+                                    })
+                                }
                                 key={index}
                                 color="basic"
                                 className="h-full w-full"

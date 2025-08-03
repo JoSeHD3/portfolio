@@ -16,38 +16,77 @@ export function cn(...inputs: ClassValue[]) {
 export function getProjectData(projectName: string) {
     const projectData: ProjectData = {
         data: {
-            christmas: [
+            vjournal: [
                 {
                     module: {
-                        imgPath: '/seal.jpg',
-                        description:
-                            'A personal portfolio built with React and Tailwind CSS.',
+                        imgPath: '/vjournal1.png',
+                        description: 'vjournal1',
                     },
                 },
                 {
                     module: {
-                        imgPath: '/seal.jpg',
-                        description: 'idk what do i wrtie here',
+                        imgPath: '/vjournal2.png',
+                        description: 'vjournal2',
+                    },
+                },
+                {
+                    module: {
+                        imgPath: '/vjournal3.png',
+                        description: 'vjournal3',
+                    },
+                },
+                {
+                    module: {
+                        imgPath: '/vjournal4.png',
+                        description: 'vjournal4',
                     },
                 },
             ],
-            mobilewarehouse: [
+            mobilestorage: [
                 {
                     module: {
-                        imgPath: '/seal.jpg',
-                        description: 'i dont want to do this tbh',
+                        imgPath: '/mobilestorage1.png',
+                        description: 'mobilestorage1',
                     },
                 },
                 {
                     module: {
-                        imgPath: '/seal.jpg',
-                        description: 'A boring stuff',
+                        imgPath: '/mobilestorage2.png',
+                        description: 'mobilestorage2',
                     },
                 },
                 {
                     module: {
-                        imgPath: '/seal.jpg',
-                        description: 'Wooo hoo',
+                        imgPath: '/mobilestorage3.png',
+                        description: 'mobilestorage3',
+                    },
+                },
+            ],
+            bdo: [
+                {
+                    module: {
+                        imgPath: '/bdo1.png',
+                        description: 'bdo1',
+                    },
+                },
+                {
+                    module: {
+                        imgPath: '/bdo2.png',
+                        description: 'bdo2',
+                    },
+                },
+            ],
+            christmascalendar: [
+                {
+                    module: {
+                        imgPath: '/christmascalendar1.png',
+                        description: 'christmascalendar1',
+                    },
+                },
+                {
+                    module: {
+                        imgPath: '/christmascalendar2.png',
+                        description: 'christmascalendar2',
                     },
                 },
             ],

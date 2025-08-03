@@ -5,10 +5,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { AnimatePresence, motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
     const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const item = projectItems[index];
 
     const next = () =>
@@ -83,7 +85,17 @@ const Projects = () => {
                     <ArrowForwardIosIcon fontSize="large" />
                 </button>
             </div>
-            <Button variant="border" className="mt-8">
+            <Button
+                variant="border"
+                className="mt-8"
+                onClick={() => {
+                    if (item.id === 3) {
+                        console.log('Portfolio project clicked!');
+                    } else {
+                        navigate(item.path || '');
+                    }
+                }}
+            >
                 {t('projectsButton')}
             </Button>
         </section>

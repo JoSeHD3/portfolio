@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { experienceItems } from './experienceItems';
 import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
@@ -14,6 +14,10 @@ const Experience = () => {
     };
 
     const descriptionLines = description.split('\n');
+
+    useEffect(() => {
+        setDescription(t(experienceItems[0].description));
+    }, [t]);
 
     return (
         <main
