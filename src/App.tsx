@@ -13,9 +13,9 @@ function App() {
                 <NavbarBar />
 
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
+                    <Route path="/portfolio" element={<HomePage />} />
                     <Route
-                        path="/projects/:projectName"
+                        path="portfolio/projects/:projectName"
                         element={<ProjectPage />}
                     />
                 </Routes>

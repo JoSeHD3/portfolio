@@ -11,7 +11,7 @@ const Technology = () => {
                 {technologyItems.map((icon) => (
                     <Tooltip key={icon.id} title={icon.alt}>
                         <img
-                            src={icon.src}
+                            src={`/portfolio${icon.src}`}
                             alt={icon.alt}
                             className="w-16 h-16 rounded-full bg-white"
                         />

@@ -12,14 +12,14 @@ const projectItems: ProjectItem[] = [
         image: '/vjournal1.png',
         title: 'project1Title',
         description: 'project1Description',
-        path: '/projects/vjournal',
+        path: '/portfolio/projects/vjournal',
     },
     {
         id: 2,
         image: '/mobilestorage1.png',
         title: 'project2Title',
         description: 'project2Description',
-        path: '/projects/mobilestorage',
+        path: '/portfolio/projects/mobilestorage',
     },
     {
         id: 3,
@@ -32,14 +32,14 @@ const projectItems: ProjectItem[] = [
         image: '/bdo1.png',
         title: 'project4Title',
         description: 'project4Description',
-        path: '/projects/bdo',
+        path: '/portfolio/projects/bdo',
     },
     {
         id: 5,
         image: '/christmascalendar1.png',
         title: 'project5Title',
         description: 'project5Description',
-        path: '/projects/christmascalendar',
+        path: '/portfolio/projects/christmascalendar',
     },
 ];
 

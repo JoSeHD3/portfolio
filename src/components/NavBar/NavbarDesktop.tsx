@@ -16,7 +16,7 @@ const NavbarDesktop = () => {
                         <Button
                             LinkComponent={Link}
                             onClick={() =>
-                                navigate('/', {
+                                navigate('/portfolio/', {
                                     state: { scrollTo: item.location },
                                 })
                             }

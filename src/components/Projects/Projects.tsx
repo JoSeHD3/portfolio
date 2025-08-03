@@ -82,7 +82,7 @@ const Projects = () => {
                     >
                         <div className="w-full overflow-hidden">
                             <img
-                                src={item.image}
+                                src={`/portfolio${item.image}`}
                                 alt={t(item.title)}
                                 className="w-full object-cover border border-neutral-700"
                             />

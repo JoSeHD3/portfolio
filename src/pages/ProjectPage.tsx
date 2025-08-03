@@ -24,7 +24,7 @@ const ProjectPage = () => {
                 >
                     <>
                         <img
-                            src={item.module.imgPath}
+                            src={`/portfolio${item.module.imgPath}`}
                             alt="projectimg"
                             className="md:w-3/5 sm:w-full object-cover rounded-xl"
                         />
