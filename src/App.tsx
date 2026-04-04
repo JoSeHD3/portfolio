@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@mui/material/styles';
-import { NavbarBar, theme } from './components';
+import { LightWavesBackground, NavbarBar, theme } from './components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './i18n';
 import './i18nSync';
@@ -9,16 +9,20 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <Router basename='/portfolio'>
-                <div className="fixed inset-0 -z-10 bg-gradient-to-r from-[#262626] via-transparent to-[#262626]" />
-                <NavbarBar />
+                <div className="relative isolate min-h-screen">
+                    <LightWavesBackground className="-z-10" />
+                    <div className="relative z-10">
+                        <NavbarBar />
 
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route
-                        path="/projects/:projectName"
-                        element={<ProjectPage />}
-                    />
-                </Routes>
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route
+                                path="/projects/:projectName"
+                                element={<ProjectPage />}
+                            />
+                        </Routes>
+                    </div>
+                </div>
             </Router>
         </ThemeProvider>
     );
