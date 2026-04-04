@@ -8,14 +8,14 @@ import { HomePage, ProjectPage } from './pages';
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <Router>
+            <Router basename='/portfolio'>
                 <div className="fixed inset-0 -z-10 bg-gradient-to-r from-[#262626] via-transparent to-[#262626]" />
                 <NavbarBar />
 
                 <Routes>
-                    <Route path="/portfolio" element={<HomePage />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route
-                        path="portfolio/projects/:projectName"
+                        path="/projects/:projectName"
                         element={<ProjectPage />}
                     />
                 </Routes>
