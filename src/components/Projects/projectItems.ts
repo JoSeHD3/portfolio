@@ -1,46 +1,48 @@
 interface ProjectItem {
     id: number;
-    image: string;
     title: string;
-    description: string;
-    path?: string;
+    descriptions: string[];
+    tags: string[];
+    imagePath: string;
 }
 
 const projectItems: ProjectItem[] = [
     {
         id: 1,
-        image: '/vjournal1.png',
         title: 'project1Title',
-        description: 'project1Description',
-        path: '/portfolio/projects/vjournal',
+        descriptions: ['vjournal1', 'vjournal2', 'vjournal3', 'vjournal4'],
+        tags: [
+            'Next.js',
+            'Tailwind CSS',
+            'shadcn/ui',
+            'Firebase',
+            'TanStack Query',
+            'ChatGPT',
+        ],
+        imagePath: '/vjournal-collage.png',
     },
-    {
+        {
         id: 2,
-        image: '/mobilestorage1.png',
-        title: 'project2Title',
-        description: 'project2Description',
-        path: '/portfolio/projects/mobilestorage',
+        title: 'project5Title',
+        descriptions: ['christmascalendar1', 'christmascalendar2'],
+        tags: ['Next.js', 'MongoDB', 'shadcn/ui', 'Vercel'],
+        imagePath: '/christmascalendar-collage.png',
     },
     {
         id: 3,
-        image: '/seal.jpg',
-        title: 'project3Title',
-        description: 'project3Description',
+        title: 'project2Title',
+        descriptions: ['mobilestorage1', 'mobilestorage2', 'mobilestorage3'],
+        tags: ['Java', 'React', 'MySQL', 'Android Studio'],
+        imagePath: '/mobilestorage-collage.png',
     },
     {
         id: 4,
-        image: '/bdo1.png',
         title: 'project4Title',
-        description: 'project4Description',
-        path: '/portfolio/projects/bdo',
+        descriptions: ['bdo1', 'bdo2'],
+        tags: ['.NET Framework', 'Desktop', 'C#'],
+        imagePath: '/bdo-collage.png',
     },
-    {
-        id: 5,
-        image: '/christmascalendar1.png',
-        title: 'project5Title',
-        description: 'project5Description',
-        path: '/portfolio/projects/christmascalendar',
-    },
+
 ];
 
 export { projectItems };

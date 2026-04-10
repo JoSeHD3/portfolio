@@ -1,114 +1,61 @@
-import { useState } from 'react';
 import { projectItems } from './projectItems';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { AnimatePresence, motion } from 'framer-motion';
-import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import Snackbar from '@mui/material/Snackbar';
+import { Tag } from '..';
 
 const Projects = () => {
-    const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
-    const [isSnackbarOpened, setIsSnackbarOpened] = useState<boolean>(false);
     const { t } = useTranslation();
-    const navigate = useNavigate();
-    const item = projectItems[index];
-
-    const next = () =>
-        setIndex([
-            (index + 1) % projectItems.length,
-            1, // forward
-        ]);
-
-    const prev = () =>
-        setIndex([
-            (index - 1 + projectItems.length) % projectItems.length,
-            -1, // backward
-        ]);
-
-    const variants = {
-        enter: (direction: number) => ({
-            x: direction > 0 ? 50 : -50,
-            opacity: 0,
-        }),
-        center: {
-            x: 0,
-            opacity: 1,
-        },
-        exit: (direction: number) => ({
-            x: direction > 0 ? -50 : 50,
-            opacity: 0,
-        }),
-    };
-
-    const handleClick = () => {
-        if (item.id === 3) {
-            setIsSnackbarOpened(true);
-        } else {
-            navigate(item.path || '');
-        }
-    };
-
-    const handleClose = () => {
-        setIsSnackbarOpened(false);
-    };
 
     return (
         <section
-            className="flex flex-col items-center justify-center mt-20 mb-20 gap-4  px-4"
+            className="mt-10 mb-20 px-4"
             id="projects"
         >
-            <div className="text-[#0DAD8D] mb-2 text-3xl font-semibold">
-                {t(item.title)}
+            <div className="container mx-auto flex flex-col gap-6">
+                {projectItems.map((item, index) => {
+                    const isReversed = index % 2 === 1;
+
+                    return (
+                        <article
+                            key={item.id}
+                            className={`overflow-hidden rounded-3xl border border-[#0DAD8D]/25 bg-[#262626]/80 shadow-[0_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-sm lg:flex ${
+                                isReversed ? 'lg:flex-row-reverse' : ''
+                            }`}
+                        >
+                            <div className="relative min-h-[260px] border-b border-[#0DAD8D]/15 bg-[radial-gradient(circle_at_top,_rgba(13,173,141,0.16),_transparent_58%),linear-gradient(135deg,_rgba(255,255,255,0.04),_rgba(0,0,0,0.04))] lg:w-1/2 lg:border-b-0 lg:border-r lg:border-[#0DAD8D]/15">
+                                <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.08),_rgba(0,0,0,0.28))]" />
+                                <div className="relative flex h-full items-center justify-center p-8">
+                                    <img
+                                        src={`/portfolio${item.imagePath}`}
+                                        alt={t(item.title)}
+                                        className="h-auto max-w-full rounded-2xl object-cover"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col gap-4 px-6 py-6 md:px-8 md:py-8 lg:w-1/2 lg:px-10 lg:py-10">
+                                <p className="text-xs uppercase tracking-[0.35em] text-[#0DAD8D]/80">
+                                    Project {String(item.id).padStart(2, '0')}
+                                </p>
+                                <h3 className="text-2xl font-semibold text-[#f0f0f0] md:text-3xl">
+                                    {t(item.title)}
+                                </h3>
+                                <div className="space-y-4 text-sm leading-7 text-[#cfcfcf]">
+                                    {item.descriptions.map((description) => (
+                                        <p key={description}>
+                                            {t(description)}
+                                        </p>
+                                    ))}
+                                </div>
+                                <div className="flex flex-wrap gap-2 pt-2">
+                                    {item.tags.map((tag) => (
+                                        <Tag key={tag} content={tag} />
+                                    ))}
+                                </div>
+                            </div>
+                        </article>
+                    );
+                })}
             </div>
-            <div className="md:w-full gap-4 max-w-md flex items-center justify-center">
-                <button
-                    onClick={prev}
-                    className="hover:text-[#0DAD8D] transition"
-                >
-                    <ArrowBackIosNewIcon fontSize="large" />
-                </button>
-                <AnimatePresence custom={direction} mode="wait">
-                    <motion.div
-                        key={item.id}
-                        custom={direction}
-                        variants={variants}
-                        initial="enter"
-                        animate="center"
-                        exit="exit"
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                        className="w-full"
-                    >
-                        <div className="w-full overflow-hidden">
-                            <img
-                                src={`/portfolio${item.image}`}
-                                alt={t(item.title)}
-                                className="w-full object-cover border border-neutral-700"
-                            />
-                        </div>
-                        <div className="mt-4 text-sm">
-                            {t(item.description)}
-                        </div>
-                    </motion.div>
-                </AnimatePresence>
-                <button
-                    onClick={next}
-                    className="hover:text-[#0DAD8D] transition"
-                >
-                    <ArrowForwardIosIcon fontSize="large" />
-                </button>
-            </div>
-            <Button variant="border" className="mt-8" onClick={handleClick}>
-                {t('projectsButton')}
-            </Button>
-            <Snackbar
-                open={isSnackbarOpened}
-                autoHideDuration={3000}
-                onClose={handleClose}
-                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                message={t('snackbar')}
-            />
         </section>
     );
 };

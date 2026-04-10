@@ -3,7 +3,7 @@ import { LightWavesBackground, NavbarBar, theme } from './components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './i18n';
 import './i18nSync';
-import { HomePage, ProjectPage } from './pages';
+import { HomePage } from './pages';
 
 function App() {
     return (
@@ -16,10 +16,6 @@ function App() {
 
                         <Routes>
                             <Route path="/" element={<HomePage />} />
-                            <Route
-                                path="/projects/:projectName"
-                                element={<ProjectPage />}
-                            />
                         </Routes>
                     </div>
                 </div>
