@@ -90,6 +90,11 @@ const technologyItems: TechnologyItem[] = [
         src: '/icons/npm.png',
         alt: 'npm',
     },
+    {
+        id: 18,
+        src: '/icons/nestjs.png',
+        alt: 'NestJS',
+    }
 ];
 
 export { technologyItems };
