@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    background-color: #262626;
+  background-color: #020814;
     color: #a8a8a8;
   font-family: 'Roboto', sans-serif;
     --background: oklch(1 0 0);
@@ -131,8 +131,15 @@
   * {
     @apply border-border outline-ring/50;
     }
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    background-color: #020814;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    overscroll-behavior-y: none;
     }
   html {
     @apply font-sans;

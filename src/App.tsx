@@ -9,7 +9,7 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <Router basename='/portfolio'>
-                <div className="relative isolate min-h-screen">
+                <div className="relative isolate min-h-[100dvh] overflow-x-hidden bg-[#020814]">
                     <LightWavesBackground className="-z-10" />
                     <div className="relative z-10">
                         <NavbarBar />
