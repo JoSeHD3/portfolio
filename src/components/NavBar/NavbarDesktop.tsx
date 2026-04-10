@@ -16,7 +16,7 @@ const NavbarDesktop = () => {
                         <Button
                             LinkComponent={Link}
                             onClick={() =>
-                                navigate('/portfolio/', {
+                                navigate('', {
                                     state: { scrollTo: item.location },
                                 })
                             }
@@ -24,7 +24,7 @@ const NavbarDesktop = () => {
                             color="basic"
                             className="h-full xl:w-48"
                         >
-                            <span className="text-lg text-clip text-[#a8a8a8]">
+                            <span className="text-lg text-clip text-[#e2e2e2]">
                                 {item.num}
                             </span>
                             <span className="text-lg text-clip ">

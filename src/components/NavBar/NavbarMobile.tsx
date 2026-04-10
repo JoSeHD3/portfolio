@@ -36,7 +36,7 @@ const NavbarMobile = () => {
                             <Button
                                 LinkComponent={Link}
                                 onClick={() =>
-                                    navigate('/portfolio/', {
+                                    navigate('', {
                                         state: { scrollTo: item.location },
                                     })
                                 }
