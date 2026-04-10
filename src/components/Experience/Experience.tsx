@@ -1,46 +1,46 @@
-import { useEffect, useState } from 'react';
 import { experienceItems } from './experienceItems';
-import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
+import { Card, Tag } from '..';
 
 const Experience = () => {
     const { t } = useTranslation();
-    const [description, setDescription] = useState<string>(
-        t(experienceItems[0].description)
-    );
-
-    const onClickHandler = (description: string): void => {
-        setDescription(description);
-    };
-
-    const descriptionLines = description.split('\n');
-
-    useEffect(() => {
-        setDescription(t(experienceItems[0].description));
-    }, [t]);
 
     return (
         <main
-            className="flex flex-row items-center justify-center w-full mt-20 mb-20"
+            className="container mx-auto grid md:grid-cols-1 lg:grid-cols-2 items-start justify-center w-full mb-20"
             id="experience"
         >
-            <div className="flex-1 px-8 space-y-1">
-                {descriptionLines.map((line, index) => (
-                    <p key={index}>{line}</p>
-                ))}
-            </div>
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mx-4 flex-1">
-                {experienceItems.map((item, index) => (
-                    <Button
-                        variant="border"
-                        className=""
-                        key={index}
-                        onClick={() => onClickHandler(t(item.description))}
-                    >
-                        {t(item.title)}
-                    </Button>
-                ))}
-            </div>
+            {experienceItems.map((item) => (
+                <Card key={item.title}>
+                    {(() => {
+                        const title = t(item.title);
+                        const [firstWord, ...rest] = title.split(' ');
+                        const remainingTitle = rest.join(' ');
+
+                        return (
+                            <p className='mb-4 text-3xl font-semibold'>
+                                <span className='text-[#e2e2e2]'>{firstWord}</span>
+                                {remainingTitle && (
+                                    <span className='text-[#0DAD8D]'> {' '}
+                                        {remainingTitle}
+                                    </span>
+                                )}
+                            </p>
+                        );
+                    })()}
+                    <p className='text-[#cfcfcf] mb-4 text-lg'>{item.company}</p>
+                    {t(item.description).split('\n').map((line, index) => (
+                        <p key={index} className='text-[#cfcfcf]'>{line}</p>
+                    ))}
+                    <br />
+                    {item.tags && (item.tags.map((tag, index) => (
+                        <Tag
+                            key={index}
+                            content={tag}  
+                        /> 
+                    )))}    
+                </Card>
+            ))}
         </main>
     );
 };

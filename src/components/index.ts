@@ -8,3 +8,5 @@ export { Projects } from './Projects';
 export { Contact } from './Contact';
 export { Technology } from './Technology';
 export { LightWavesBackground } from './ui/light-waves';
+export { LightBeam } from './ui/light-beam';
+export { Tag, Card } from './Card'; 

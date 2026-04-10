@@ -26,7 +26,7 @@ const Header = () => {
 
     return (
         <header
-            className="flex flex-col container mx-auto mt-20 mb-80 px-4 min-h-104 md:min-h-62"
+            className="flex flex-col container mx-auto mt-20 mb-34 px-4 min-h-104 md:min-h-62"
             id="header"
         >
             <span
@@ -45,11 +45,11 @@ const Header = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.7, ease: 'easeOut' }}
                     >
-                        <h1 className="bold text-[#CFCFCF] text-6xl mb-4">
+                        <h1 className="bold text-[#e2e2e2] text-6xl mb-4">
                             {name}
                         </h1>
-                        <h2 className="bold text-4xl mb-8">{briefDesc}</h2>
-                        <span className="semibold w-100">{fullDesc}</span>
+                        <h2 className="bold text-4xl mb-8 text-[#cfcfcf]">{briefDesc}</h2>
+                        <span className="semibold w-100 text-[#cfcfcf]">{fullDesc}</span>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -3,6 +3,7 @@ import {
     Contact,
     Experience,
     Header,
+    LightBeam,
     Projects,
     Technology,
 } from '@components';
@@ -26,7 +27,19 @@ const HomePage = () => {
         <>
             <Header />
             <main>
-                <Band label={'bandExperience'} flip={false} />
+                <div className='text-[#0DAD8D] font-medium px-4 py-6 container mx-auto text-3xl relative mb-10 mt-20'>
+                    <span>Experience
+                    <LightBeam
+                        className="absolute left-52 -translate-x-1/2"
+                        width="240px"
+                        height={8}
+                        angle={0}
+                        blur={8}
+                        opacity={0.98}
+                        style={{ transform: 'translateX(-50%)' }}
+                    />
+                    </span>
+                </div>
                 <Experience />
                 <Band label={'bandProjects'} flip={true} />
                 <Projects />
