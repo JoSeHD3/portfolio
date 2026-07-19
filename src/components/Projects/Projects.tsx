@@ -1,15 +1,14 @@
 import { projectItems } from './projectItems';
 import { useTranslation } from 'react-i18next';
 import { Tag } from '..';
+import { Link } from '@mui/material';
+import { OpenInNew } from '@mui/icons-material';
 
 const Projects = () => {
     const { t } = useTranslation();
 
     return (
-        <section
-            className="mt-10 mb-20 px-4"
-            id="projects"
-        >
+        <section className="mt-10 mb-20 px-4" id="projects">
             <div className="container mx-auto flex flex-col gap-6">
                 {projectItems.map((item, index) => {
                     const isReversed = index % 2 === 1;
@@ -46,6 +45,21 @@ const Projects = () => {
                                         </p>
                                     ))}
                                 </div>
+                                {item.button && (
+                                    <Link
+                                        href="https://piotrbozek.pl"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <span className="cursor-pointer py-2 flex justify-end text-sm font-medium text-[#0DAD8D] shadow-md transition duration-200 hover:text-[#0DAD8D]/80 hover:shadow-lg">
+                                            {t('projectsButton')}{' '}
+                                            <OpenInNew
+                                                className="ml-1"
+                                                fontSize="small"
+                                            />
+                                        </span>
+                                    </Link>
+                                )}
                                 <div className="flex flex-wrap gap-2 pt-2">
                                     {item.tags.map((tag) => (
                                         <Tag key={tag} content={tag} />
